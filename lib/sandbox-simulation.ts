@@ -37,7 +37,7 @@ export function runSimulatedExtraction(
   const logs: string[] = [];
 
   logs.push(`[${new Date().toISOString().slice(11, 19)}] [SIMULATION] Initializing pipeline for target stream: "${sourceId}"`);
-  logs.push(`[${new Date().toISOString().slice(11, 19)}] Applied TLS Client Hello Profile: Chrome 128 / macOS (Simulated Socket)`);
+  logs.push(`[${new Date().toISOString().slice(11, 19)}] Applied TLS Client Hello Profile: Chrome 128 / macOS (Simulated Profile)`);
   logs.push(`[${new Date().toISOString().slice(11, 19)}] Rotated Session Gateway IP: 198.51.100.${Math.floor(Math.random() * 200) + 10}`);
 
   if (chaosMode === 'rate-limit-429') {
@@ -105,7 +105,7 @@ export function runSimulatedExtraction(
     headers: {
       'content-type': 'application/json; charset=utf-8',
       'x-simulation-mode': 'active-demo',
-      'x-tls-profile-match': 'BENCHMARK_PASS_0.98',
+      'x-tls-profile-match': 'SIMULATED_HEADER_MATCH',
       'x-resilience-retries': chaosMode && chaosMode !== 'none' ? '1' : '0',
       'cache-control': 'max-age=60, s-maxage=300',
     },

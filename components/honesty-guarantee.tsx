@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ShieldCheck, Check, X, Award, AlertCircle, Terminal, HelpCircle } from 'lucide-react';
+import { ShieldCheck, Check, X, AlertCircle } from 'lucide-react';
 
 export function HonestyGuarantee() {
   return (
@@ -11,13 +11,13 @@ export function HonestyGuarantee() {
         <div className="text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-medium border border-emerald-500/20">
             <ShieldCheck className="w-4 h-4" />
-            <span>Honesty & Signal-Over-Noise Guarantee</span>
+            <span>Honesty &amp; Signal-Over-Noise Guarantee</span>
           </div>
           <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">
             No Fabricated Logos. No Fake Testimonials.
           </h2>
           <p className="mt-4 text-base text-muted-foreground leading-relaxed">
-            Most landing pages populate fake Fortune 500 logos and quotes from invented VPs. We believe software engineering is graded on architecture, speed, and real code — not stock photos.
+            Most landing pages populate fake Fortune 500 logos and quotes from invented VPs. We believe software engineering is graded on architecture, speed, and real code — not stock photos or fabricated marketing numbers.
           </p>
         </div>
 
@@ -34,7 +34,7 @@ export function HonestyGuarantee() {
             </div>
             <div className="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-semibold border border-emerald-500/20">
               <Check className="w-4 h-4" />
-              <span>100% Honest Copy</span>
+              <span>Transparent Copy</span>
             </div>
           </div>
 
@@ -45,7 +45,7 @@ export function HonestyGuarantee() {
                 <span>Zero Fake User Counts</span>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                We display real-time benchmark metrics from our test suite rather than inventing &quot;10,000+ Happy Developers&quot; metrics.
+                We present an interactive architectural simulation rather than inventing &quot;10,000+ Happy Developers&quot; marketing numbers.
               </p>
             </div>
 
@@ -55,28 +55,28 @@ export function HonestyGuarantee() {
                 <span>Zero Invented Quotes</span>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                No fake quotes from fictional Tech Leads. Every claim is backed by reproducible open benchmarks.
+                No fake quotes from fictional Tech Leads. Every feature is backed by transparent technical design documentation.
               </p>
             </div>
 
             <div className="space-y-2">
               <div className="font-bold text-foreground flex items-center gap-1.5 text-sm">
                 <Check className="w-4 h-4 text-emerald-500" />
-                <span>Transparent Limitations</span>
+                <span>Explicit Simulation Scope</span>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                We explicitly document where our pipeline stops, including hard rate caps and non-supported anti-bot barriers.
+                We explicitly disclose that our interactive sandbox is a demonstration running against low-risk public endpoints.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Factual Technical Comparison Matrix */}
+        {/* Qualitative Architectural Comparison Matrix */}
         <div className="mt-14 max-w-5xl mx-auto">
           <div className="text-center mb-6">
-            <h3 className="text-xl font-bold text-foreground">Factual Technical Comparison</h3>
+            <h3 className="text-xl font-bold text-foreground">Architectural Comparison</h3>
             <p className="text-xs text-muted-foreground mt-1 font-mono">
-              Raw architectural trade-offs vs common scraping approaches
+              Qualitative design trade-offs of PulseEngine vs standard ingestion patterns
             </p>
           </div>
 
@@ -85,8 +85,8 @@ export function HonestyGuarantee() {
               <table className="w-full text-left text-xs font-mono">
                 <thead>
                   <tr className="bg-muted/60 border-b border-border text-muted-foreground">
-                    <th className="p-4 font-semibold">Technical Feature</th>
-                    <th className="p-4 font-semibold text-emerald-600 dark:text-emerald-400">PulseEngine</th>
+                    <th className="p-4 font-semibold">Architectural Vector</th>
+                    <th className="p-4 font-semibold text-emerald-600 dark:text-emerald-400">PulseEngine Concept</th>
                     <th className="p-4 font-semibold">Raw Playwright</th>
                     <th className="p-4 font-semibold">Simple cURL/Fetch</th>
                     <th className="p-4 font-semibold">Paid Proxy API</th>
@@ -94,59 +94,59 @@ export function HonestyGuarantee() {
                 </thead>
                 <tbody className="divide-y divide-border text-foreground">
                   <tr>
-                    <td className="p-4 font-sans font-medium">TLS JA4 Fingerprint Spoofing</td>
+                    <td className="p-4 font-sans font-medium">TLS Profile Evasion</td>
                     <td className="p-4 text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
-                      <Check className="w-4 h-4" /> Native Socket
+                      <Check className="w-4 h-4" /> TLS Socket Profile
                     </td>
                     <td className="p-4 text-amber-500 flex items-center gap-1">
-                      <AlertCircle className="w-3.5 h-3.5" /> High CPU
+                      <AlertCircle className="w-3.5 h-3.5" /> Full Browser
                     </td>
                     <td className="p-4 text-red-500 flex items-center gap-1">
-                      <X className="w-4 h-4" /> Hard Blocked
+                      <X className="w-4 h-4" /> Fixed Client Hello
                     </td>
-                    <td className="p-4 text-emerald-500 font-medium">Varies</td>
+                    <td className="p-4 text-emerald-500 font-medium">Provider Managed</td>
                   </tr>
 
                   <tr>
-                    <td className="p-4 font-sans font-medium">Memory Footprint / Request</td>
-                    <td className="p-4 text-emerald-600 dark:text-emerald-400 font-bold">&lt; 42 MB</td>
-                    <td className="p-4 text-red-500">&gt; 350 MB</td>
-                    <td className="p-4 text-emerald-500">&lt; 5 MB</td>
-                    <td className="p-4 text-muted-foreground">N/A (SaaS)</td>
+                    <td className="p-4 font-sans font-medium">Memory Footprint</td>
+                    <td className="p-4 text-emerald-600 dark:text-emerald-400 font-bold">Low (Design Target)</td>
+                    <td className="p-4 text-red-500">High (Browser Runtime)</td>
+                    <td className="p-4 text-emerald-500">Minimal</td>
+                    <td className="p-4 text-muted-foreground">SaaS Managed</td>
                   </tr>
 
                   <tr>
-                    <td className="p-4 font-sans font-medium">DOM Drift Self-Healing AST</td>
+                    <td className="p-4 font-sans font-medium">DOM Drift Resilience</td>
                     <td className="p-4 text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
-                      <Check className="w-4 h-4" /> Built-in
+                      <Check className="w-4 h-4" /> Semantic Microdata
                     </td>
                     <td className="p-4 text-red-500 flex items-center gap-1">
-                      <X className="w-4 h-4" /> Silent Fail
+                      <X className="w-4 h-4" /> Brittle Selectors
                     </td>
                     <td className="p-4 text-red-500 flex items-center gap-1">
-                      <X className="w-4 h-4" /> Silent Fail
+                      <X className="w-4 h-4" /> Brittle Selectors
                     </td>
-                    <td className="p-4 text-red-500 flex items-center gap-1">
-                      <X className="w-4 h-4" /> Raw HTML
+                    <td className="p-4 text-amber-500 flex items-center gap-1">
+                      <AlertCircle className="w-3.5 h-3.5" /> Raw HTML
                     </td>
                   </tr>
 
                   <tr>
-                    <td className="p-4 font-sans font-medium">Session Rate Jittering</td>
+                    <td className="p-4 font-sans font-medium">Session Pacing</td>
                     <td className="p-4 text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
-                      <Check className="w-4 h-4" /> Poisson Curve
+                      <Check className="w-4 h-4" /> Jittered Pacing
                     </td>
-                    <td className="p-4 text-amber-500">Manual Script</td>
-                    <td className="p-4 text-red-500">None</td>
-                    <td className="p-4 text-emerald-500">Server Side</td>
+                    <td className="p-4 text-amber-500">Manual Scripting</td>
+                    <td className="p-4 text-red-500">Unpaced Direct</td>
+                    <td className="p-4 text-emerald-500">Server-Side Buckets</td>
                   </tr>
 
                   <tr>
-                    <td className="p-4 font-sans font-medium">Cost / 100k Requests</td>
-                    <td className="p-4 text-emerald-600 dark:text-emerald-400 font-bold">$1.20 (Self-Host)</td>
-                    <td className="p-4 text-amber-500">$18.50 (Compute)</td>
-                    <td className="p-4 text-emerald-500">$0.30</td>
-                    <td className="p-4 text-red-500">$45.00+</td>
+                    <td className="p-4 font-sans font-medium">Infrastructure Model</td>
+                    <td className="p-4 text-emerald-600 dark:text-emerald-400 font-bold">Self-Hosted Serverless/VPS</td>
+                    <td className="p-4 text-amber-500">Heavy Compute Nodes</td>
+                    <td className="p-4 text-emerald-500">Minimal Compute</td>
+                    <td className="p-4 text-muted-foreground">Metered SaaS Subscriptions</td>
                   </tr>
                 </tbody>
               </table>

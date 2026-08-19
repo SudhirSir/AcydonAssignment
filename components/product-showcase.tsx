@@ -244,51 +244,51 @@ export function ProductShowcase() {
               </div>
             </div>
 
-            {/* Performance Stats Cards - Clear Simulated Metrics */}
+            {/* Performance Stats Cards - Illustrative Design Targets */}
             <div className="lg:col-span-4 space-y-3">
               <div className="text-xs font-mono text-muted-foreground font-semibold flex items-center gap-1.5">
                 <BarChart3 className="w-3.5 h-3.5 text-blue-500" />
-                BENCHMARK LATENCY (SIMULATED):
+                SIMULATED DESIGN TARGETS:
               </div>
 
               <div className="p-4 rounded-xl border border-border bg-background space-y-3">
                 <div>
                   <div className="flex justify-between text-xs font-mono mb-1">
-                    <span className="text-muted-foreground">Target p50 Latency</span>
-                    <span className="font-bold text-foreground">95 ms</span>
+                    <span className="text-muted-foreground">Simulated Latency</span>
+                    <span className="font-bold text-foreground">Sub-200ms Target</span>
                   </div>
                   <div className="w-full h-1.5 rounded-full bg-muted overflow-hidden">
-                    <div className="h-full bg-emerald-500 rounded-full w-[28%]"></div>
+                    <div className="h-full bg-emerald-500 rounded-full w-[35%]"></div>
                   </div>
                 </div>
 
                 <div>
                   <div className="flex justify-between text-xs font-mono mb-1">
-                    <span className="text-muted-foreground">Target p95 Latency</span>
-                    <span className="font-bold text-foreground">180 ms</span>
+                    <span className="text-muted-foreground">Memory Profile</span>
+                    <span className="font-bold text-foreground">Low Overhead</span>
                   </div>
                   <div className="w-full h-1.5 rounded-full bg-muted overflow-hidden">
-                    <div className="h-full bg-blue-500 rounded-full w-[52%]"></div>
+                    <div className="h-full bg-blue-500 rounded-full w-[25%]"></div>
                   </div>
                 </div>
 
                 <div>
                   <div className="flex justify-between text-xs font-mono mb-1">
-                    <span className="text-muted-foreground">Benchmark Success Rate</span>
-                    <span className="font-bold text-emerald-600 dark:text-emerald-400">99.4% (Test)</span>
+                    <span className="text-muted-foreground">Evasion Strategy</span>
+                    <span className="font-bold text-emerald-600 dark:text-emerald-400">Multi-Tier Fallback</span>
                   </div>
                   <div className="w-full h-1.5 rounded-full bg-muted overflow-hidden">
-                    <div className="h-full bg-emerald-500 rounded-full w-[99.4%]"></div>
+                    <div className="h-full bg-emerald-500 rounded-full w-[90%]"></div>
                   </div>
                 </div>
 
                 <div>
                   <div className="flex justify-between text-xs font-mono mb-1">
-                    <span className="text-muted-foreground">Worker Node Footprint</span>
-                    <span className="font-bold text-foreground">&lt; 42 MB / node</span>
+                    <span className="text-muted-foreground">Deployment Target</span>
+                    <span className="font-bold text-foreground">Edge / Serverless Container</span>
                   </div>
                   <div className="w-full h-1.5 rounded-full bg-muted overflow-hidden">
-                    <div className="h-full bg-purple-500 rounded-full w-[35%]"></div>
+                    <div className="h-full bg-purple-500 rounded-full w-[50%]"></div>
                   </div>
                 </div>
               </div>
