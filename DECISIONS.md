@@ -1,44 +1,44 @@
-# Architecture & Engineering Decisions: PulseEngine
+# DECISIONS.md — PulseEngine Architecture & Design Choices
 
 **Candidate Track**: Part 2 — The Premium Home Page  
-**Project**: PulseEngine (Resilient Data Extraction & Web Intelligence Platform)  
+**Product Concept**: PulseEngine (Resilient Data Intelligence Platform)  
 **Target Evaluator**: Acdyon Technologies Engineering Team  
 
 ---
 
-### 1. Why This Ingestion & Product Strategy Over the Obvious Alternative Rejected?
+### 1. Why This Product & Design Strategy Over the Obvious Alternative Rejected?
 
-**Strategy Chosen**: An interactive, developer-first product landing page featuring a live in-browser telemetry sandbox, real-time chaos simulator (429 rate limits, Turnstile challenges, DOM class drift), and complete transparency with **zero fake social proof or fabricated logos**.
+**Strategy Chosen**: A developer-first product landing page featuring an **interactive architecture simulation** (sandbox terminal & real-time chaos recovery lab) combined with 100% transparent copy (**zero fabricated user counts, fake client logos, or invented quotes**).
 
-**Obvious Alternative Rejected**: A standard SaaS landing page with static hero screenshots, fake enterprise client logos (e.g., "Used by Meta, Google"), stock photo testimonials, and hardcoded marketing counters.
+**Obvious Alternative Rejected**: A traditional SaaS landing page populated with static screenshots, fake Fortune 500 client logos (e.g., "Used by Meta"), stock-photo testimonials, and exaggerated marketing counters.
 
 **Rationale**:
-- **Signal Over Hype**: Senior engineers evaluating code immediately spot fake logos and stock testimonials. Acdyon's prompt explicitly called out *"Constraint that separates signal from noise: no fabricated testimonials, fake user counts, or fake logos... This is the single biggest thing we grade on."*
-- **Interactive Verification**: Rather than claiming "we bypass anti-bots", we built an interactive sandbox right inside the hero where evaluators can trigger live simulated extractions, inspect spoofed JA4+ TLS Client Hello headers, and inject chaos events to watch self-healing AST parsers recover in real-time.
-- **Alignment with Acdyon's Core Domain**: By designing the product home page around resilient data extraction, proxy rotation, and anti-bot evasion, the landing page demonstrates deep domain awareness matching Part 1 of the challenge.
+- **Signal Over Hype**: Senior evaluators instantly identify fake social proof. Acdyon's prompt explicitly highlights: *"Constraint that separates signal from noise: no fabricated testimonials, fake user counts, or fake logos... This is the single biggest thing we grade on."*
+- **Interactive Concept Demonstration**: Rather than making unverifiable marketing claims, we built an in-browser interactive simulator. Evaluators can trigger simulated failure events (429 rate limits, anti-bot challenges, HTML layout changes) to observe PulseEngine's self-healing recovery mechanism in real time.
+- **Honest Simulation Scope**: We explicitly label the interactive sandbox as an **Interactive Simulation** running against low-risk public/demo feeds, respecting scope guardrails rather than claiming live production scraping against third-party platforms.
 
 ---
 
-### 2. One Trade-Off Made Under the Time Limit & What I'd Do with a Real Week
+### 2. One Trade-Off Made Under the Time Limit & What Would Be Done With a Real Week
 
 **Trade-Off Made Under Time Limit**:
-- **Simulated Ingestion Engine**: To ensure 100% reliable, zero-latency evaluation without dependency on external rate limits, live proxy API keys, or target IP bans during review, the interactive sandbox runs an in-memory simulation engine (`lib/sandbox-simulation.ts`) with deterministic headers, telemetry logs, and chaos state triggers.
+- **In-Memory Simulation Engine**: To guarantee 100% deterministic, zero-latency evaluation without relying on third-party proxy credentials, rate limits, or IP bans during review, the interactive sandbox runs an in-memory simulation module (`lib/sandbox-simulation.ts`).
 
-**What I'd Build With a Real Week**:
-1. **Live WebAssembly (Wasm) TLS Socket Engine**: Compile a Rust/Go HTTP/2 client to WebAssembly so the browser sandbox makes actual socket-level TLS requests with customizable Client Hello ciphersuites directly from client JS.
-2. **Dynamic DOM Parser Visualizer**: Render an interactive DOM tree split-view showing before-and-after HTML markup when a target site mutates its class names, highlighting how the self-healing JSON-LD/Microdata AST fallback extracts clean JSON.
-3. **OpenAPI / SDK Code Generator**: Add live tabs to copy runnable client SDK code snippets in Python (`httpx` + stealth TLS), Node.js, and Go for any selected extraction pipeline.
+**What I Would Build With a Real Week**:
+1. **Live WebAssembly (Wasm) TLS Socket Engine**: Compile a Go/Rust HTTP/2 client to Wasm, enabling socket-level TLS Client Hello customization directly inside browser JS.
+2. **Visual DOM Diff Parser**: Render a side-by-side AST tree comparison showing how microdata and JSON-LD tags extract structured schemas when target HTML class names change.
+3. **Runnable SDK Generator**: Add interactive tabs to export copy-pasteable client code in Python (`httpx` stealth), Node.js, and Go.
 
 ---
 
-### 3. Where AI Tools Were Used & What Was Personally Verified / Modified
+### 3. Where AI Tools Were Used & What Was Personally Verified / Changed
 
 **Where AI Tools Were Used**:
-- **Component Scaffold & Layout Geometry**: AI was used to draft initial Tailwind CSS utility class combinations for responsive container breakpoints (390px mobile to 1440px desktop) and framer-motion transition configurations.
-- **Simulation Log & Header Mock Generation**: AI assisted in generating realistic Chrome 128 JA4 TLS extension strings and HTTP/2 pseudo-header sequences.
+- **Layout & Component Scaffolding**: AI assisted in drafting initial Tailwind CSS container utility classes and Framer Motion transition parameters.
+- **Mock Telemetry Strings**: AI generated realistic JA4 TLS ciphersuite strings and HTTP/2 pseudo-header definitions.
 
 **What I Personally Verified & Modified**:
-- **Dark Mode & Contrast Audit**: Verified every background surface (`--card`, `--background`, `--muted`) using Tailwind CSS variables and `next-themes` to guarantee zero unreadable dark text on dark backgrounds or FOUC flashes on load.
-- **Responsive Layout Integrity**: Tested at exactly 390px (iPhone width) and 1440px (desktop width) to confirm zero horizontal scroll, perfect touch target sizing, and responsive drawer menu behavior.
-- **Konami Code Keyboard Listener**: Wrote and verified the custom `keydown` event buffer logic for `↑ ↑ ↓ ↓ ← → ← → B A` and `Ctrl+K` to ensure the Easter Egg terminal opens smoothly without memory leaks or event duplicate listeners.
-- **Strict Compliance with Grading Guardrails**: Audited every line of text across all components to ensure zero fabricated user counts, fake customer quotes, or unauthorized brand logos were used.
+- **Honesty & Credibility Audit**: Audited all copy to remove absolute claims (e.g. replaced "Zero Blocked Requests" with "Resilient Data Extraction") and explicitly labeled all demo data as **Interactive Simulation**.
+- **Dark Mode & Contrast Audit**: Verified color contrast across `--background`, `--card`, and code blocks in both light and dark themes using `next-themes`.
+- **Responsive Layout Verification**: Tested rendered layouts at **390px mobile** and **1440px desktop** to ensure zero horizontal scrolling, responsive drawer navigation, and clean text wrapping.
+- **Konami Code Listener**: Implemented and tested custom keydown buffer logic for `↑ ↑ ↓ ↓ ← → ← → B A` and `Ctrl+K` for the Easter Egg modal.

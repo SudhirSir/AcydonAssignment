@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Play, RefreshCw, CheckCircle2, ShieldAlert, Cpu, Terminal, Code2, Sparkles, Layers, ArrowRight } from 'lucide-react';
+import { Play, RefreshCw, CheckCircle2, Cpu, Terminal, Code2, Sparkles, Layers, ArrowRight } from 'lucide-react';
 import { SAMPLE_SOURCES, runSimulatedExtraction, ExecutionResult } from '@/lib/sandbox-simulation';
 
 export function Hero() {
@@ -45,12 +45,12 @@ export function Hero() {
             <span className="flex h-2 w-2 rounded-full bg-emerald-500"></span>
             <span className="font-semibold text-emerald-600 dark:text-emerald-400">Acdyon Frontend Challenge</span>
             <span className="text-muted-foreground">•</span>
-            <span className="text-muted-foreground">Zero Fake Social Proof Guarantee</span>
+            <span className="text-muted-foreground">Interactive Simulation &amp; Zero-Hype Guarantee</span>
             <ArrowRight className="w-3.5 h-3.5 text-muted-foreground" />
           </motion.div>
         </div>
 
-        {/* Main Headline */}
+        {/* Main Hero Copy - Clean, 3-Second Clarity */}
         <div className="mt-8 text-center max-w-4xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 15 }}
@@ -58,9 +58,9 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-foreground leading-[1.12]"
           >
-            Extract Data from Any Platform.{' '}
+            Resilient Web Data Ingestion for{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-500">
-              Zero Blocked Requests.
+              AI Pipelines
             </span>
           </motion.h1>
 
@@ -70,10 +70,10 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-normal"
           >
-            Enterprise TLS fingerprint camouflage, jittered session pacing, and self-healing AST parsers. Built for high-throughput AI data ingestion pipelines that survive source anti-bot updates.
+            PulseEngine prevents web data pipelines from failing silently when target platforms rate-limit, challenge automated requests, or update their HTML layout overnight.
           </motion.p>
 
-          {/* Action CTAs */}
+          {/* Action CTAs - Dominant Hierarchy */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
@@ -85,10 +85,10 @@ export function Hero() {
                 const el = document.getElementById('sandbox-widget');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm shadow-lg shadow-emerald-600/25 transition-all duration-200 flex items-center justify-center space-x-2 active:scale-95"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-xl shadow-emerald-600/25 transition-all duration-200 flex items-center justify-center space-x-2.5 active:scale-95"
             >
               <Terminal className="w-4 h-4" />
-              <span>Launch Live Sandbox Below</span>
+              <span>Explore Interactive Demo</span>
             </button>
             <button
               onClick={() => {
@@ -98,12 +98,12 @@ export function Hero() {
               className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-card border border-border hover:bg-muted text-foreground font-semibold text-sm transition-all duration-200 flex items-center justify-center space-x-2"
             >
               <Cpu className="w-4 h-4 text-emerald-500" />
-              <span>Read Architecture Deep-Dive</span>
+              <span>View Technical Architecture</span>
             </button>
           </motion.div>
         </div>
 
-        {/* Live Interactive Code Playground (The "Wow" Element) */}
+        {/* Live Interactive Code Playground (The Showcase Element) */}
         <motion.div
           id="sandbox-widget"
           initial={{ opacity: 0, y: 35 }}
@@ -111,7 +111,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="mt-14 max-w-5xl mx-auto rounded-2xl border border-border bg-card/90 shadow-2xl overflow-hidden backdrop-blur-xl"
         >
-          {/* Header Bar */}
+          {/* Header Bar with Explicit Simulation Badge */}
           <div className="bg-muted/60 border-b border-border px-4 py-3 flex flex-wrap items-center justify-between gap-3">
             <div className="flex items-center space-x-2">
               <div className="flex space-x-1.5">
@@ -121,18 +121,17 @@ export function Hero() {
               </div>
               <span className="text-xs font-mono text-muted-foreground ml-2 flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
-                PulseEngine Sandbox Terminal v2.4
+                PulseEngine Interactive Terminal
               </span>
             </div>
 
-            {/* Status Indicator */}
-            <div className="flex items-center space-x-4 text-xs font-mono">
-              <span className="flex items-center text-emerald-600 dark:text-emerald-400">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse mr-1.5"></span>
-                API Ready (200 OK)
+            {/* Status & Simulation Indicator */}
+            <div className="flex items-center space-x-3 text-xs font-mono">
+              <span className="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-bold text-[10px] uppercase border border-emerald-500/30">
+                INTERACTIVE SIMULATION
               </span>
-              <span className="text-muted-foreground hidden sm:inline">
-                JA4+ Fingerprint: <code className="text-foreground">CHROME_128</code>
+              <span className="text-muted-foreground hidden sm:inline text-[11px]">
+                Profile: <code className="text-foreground">Chrome 128 (Demo)</code>
               </span>
             </div>
           </div>
@@ -143,7 +142,7 @@ export function Hero() {
             <div className="md:col-span-5 flex flex-col space-y-1.5">
               <label className="text-xs font-medium text-muted-foreground flex items-center justify-between">
                 <span>Target Data Stream</span>
-                <span className="text-[10px] text-emerald-500 font-mono">Low-Risk Sandbox</span>
+                <span className="text-[10px] text-emerald-500 font-mono">Low-Risk Feed</span>
               </label>
               <select
                 value={selectedSource}
@@ -152,7 +151,7 @@ export function Hero() {
               >
                 {SAMPLE_SOURCES.map((src) => (
                   <option key={src.id} value={src.id}>
-                    {src.name} ({src.type.toUpperCase()})
+                    {src.name}
                   </option>
                 ))}
               </select>
@@ -160,7 +159,7 @@ export function Hero() {
 
             {/* Engine Evasion Switcher */}
             <div className="md:col-span-4 flex flex-col space-y-1.5">
-              <label className="text-xs font-medium text-muted-foreground">Evasion Engine</label>
+              <label className="text-xs font-medium text-muted-foreground">Ingestion Strategy</label>
               <div className="flex rounded-lg border border-border bg-background p-1 text-xs">
                 <button
                   onClick={() => setSelectedEngine('tls-camouflage')}
@@ -170,7 +169,7 @@ export function Hero() {
                       : 'text-muted-foreground hover:text-foreground'
                   }`}
                 >
-                  TLS Camouflage
+                  TLS Socket
                 </button>
                 <button
                   onClick={() => setSelectedEngine('stealth-headless')}
@@ -190,7 +189,7 @@ export function Hero() {
                       : 'text-muted-foreground hover:text-foreground'
                   }`}
                 >
-                  RSS Stream
+                  RSS Fallback
                 </button>
               </div>
             </div>
@@ -205,22 +204,22 @@ export function Hero() {
                 {isExecuting ? (
                   <>
                     <RefreshCw className="w-3.5 h-3.5 animate-spin" />
-                    <span>Extracting...</span>
+                    <span>Running Demo...</span>
                   </>
                 ) : (
                   <>
                     <Play className="w-3.5 h-3.5 fill-current" />
-                    <span>Run Extraction Pipeline</span>
+                    <span>Run Simulated Extraction</span>
                   </>
                 )}
               </button>
             </div>
           </div>
 
-          {/* Quick Metrics Strip */}
+          {/* Quick Metrics Strip - Credible Labels */}
           <div className="bg-muted/30 px-5 py-2.5 border-b border-border grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
             <div>
-              <span className="text-muted-foreground block text-[10px]">RESPONSE LATENCY</span>
+              <span className="text-muted-foreground block text-[10px]">DEMO LATENCY</span>
               <span className="font-bold text-emerald-600 dark:text-emerald-400">{result.latencyMs}ms</span>
             </div>
             <div>
@@ -228,10 +227,10 @@ export function Hero() {
               <span className="font-medium text-foreground">{result.proxyIp}</span>
             </div>
             <div>
-              <span className="text-muted-foreground block text-[10px]">TLS VERDICT</span>
+              <span className="text-muted-foreground block text-[10px]">BENCHMARK PASS</span>
               <span className="font-semibold text-blue-500 flex items-center gap-1">
                 <CheckCircle2 className="w-3 h-3" />
-                PASSED (99.8%)
+                VERIFIED (SIMULATED)
               </span>
             </div>
             <div>
@@ -251,7 +250,7 @@ export function Hero() {
               }`}
             >
               <Code2 className="w-3.5 h-3.5" />
-              <span>Extracted Payload ({result.data.length} items)</span>
+              <span>Extracted Data ({result.data.length} items)</span>
             </button>
             <button
               onClick={() => setActiveTab('headers')}
@@ -262,7 +261,7 @@ export function Hero() {
               }`}
             >
               <Layers className="w-3.5 h-3.5" />
-              <span>HTTP Headers & TLS Spec</span>
+              <span>HTTP Headers &amp; TLS Spec</span>
             </button>
             <button
               onClick={() => setActiveTab('logs')}
@@ -273,7 +272,7 @@ export function Hero() {
               }`}
             >
               <Terminal className="w-3.5 h-3.5" />
-              <span>Resilience Evasion Logs ({result.resilienceLogs.length})</span>
+              <span>Resilience Log Stream ({result.resilienceLogs.length})</span>
             </button>
           </div>
 
@@ -288,7 +287,7 @@ export function Hero() {
             {activeTab === 'headers' && (
               <div className="space-y-2">
                 <div className="text-slate-400 text-[11px] pb-2 border-b border-slate-800">
-                  // Spoofed TLS 1.3 Handshake Verification Headers
+                  // Simulated TLS 1.3 Handshake &amp; Header Spec
                 </div>
                 {Object.entries(result.headers).map(([key, val]) => (
                   <div key={key} className="flex">

@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, ShieldCheck, AlertTriangle, Zap, Server, Database, CheckCircle2, Cpu, RefreshCw, BarChart3, Radio } from 'lucide-react';
 import { runSimulatedExtraction, ExecutionResult } from '@/lib/sandbox-simulation';
 
@@ -29,19 +28,19 @@ export function ProductShowcase() {
         <div className="text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-medium border border-emerald-500/20">
             <Activity className="w-3.5 h-3.5" />
-            <span>Interactive Product Telemetry</span>
+            <span>Interactive Product Demonstration</span>
           </div>
           <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">
-            Watch the Resilience Pipeline Under Attack
+            Resilience &amp; Telemetry Simulator
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
-            Don't take our word for it. Test PulseEngine&apos;s real-time evasion engine against simulated rate limits, anti-bot challenges, and markup shifts right now.
+            Test how PulseEngine handles simulated rate limits (429), anti-bot challenges, and HTML markup shifts in real-time.
           </p>
         </div>
 
         {/* Live Dashboard Card (Interactive Product Showcase) */}
         <div className="mt-12 rounded-2xl border border-border bg-card shadow-xl overflow-hidden">
-          {/* Top Control Bar */}
+          {/* Top Control Bar with Explicit Simulation Badge */}
           <div className="bg-muted/40 border-b border-border p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center space-x-3">
               <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
@@ -49,13 +48,13 @@ export function ProductShowcase() {
               </div>
               <div>
                 <h3 className="font-bold text-sm text-foreground flex items-center gap-2">
-                  <span>PulseEngine Live Telemetry & Chaos Lab</span>
-                  <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
-                    Live Simulator
+                  <span>PulseEngine Chaos &amp; Telemetry Lab</span>
+                  <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                    INTERACTIVE SIMULATION
                   </span>
                 </h3>
                 <p className="text-xs text-muted-foreground">
-                  Simulating ingestion against high-anti-bot targets
+                  Simulating resilience behavior against common failure modes
                 </p>
               </div>
             </div>
@@ -63,7 +62,7 @@ export function ProductShowcase() {
             {/* Chaos Trigger Buttons */}
             <div className="flex flex-wrap items-center gap-2">
               <span className="text-xs font-mono text-muted-foreground hidden sm:inline mr-1">
-                Inject Failure Event:
+                Inject Event:
               </span>
               <button
                 onClick={() => triggerChaos('none')}
@@ -106,15 +105,16 @@ export function ProductShowcase() {
                 }`}
               >
                 <Cpu className="w-3 h-3" />
-                <span>Simulate DOM Class Drift</span>
+                <span>Simulate HTML Class Drift</span>
               </button>
             </div>
           </div>
 
           {/* Visual Pipeline Flow Nodes */}
           <div className="p-6 bg-card border-b border-border">
-            <div className="text-xs font-mono text-muted-foreground mb-4 uppercase tracking-wider">
-              Real-Time End-to-End Pipeline Routing:
+            <div className="text-xs font-mono text-muted-foreground mb-4 uppercase tracking-wider flex items-center justify-between">
+              <span>Pipeline Architecture Flow:</span>
+              <span className="text-[10px] text-emerald-500">SIMULATED ROUTING</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 relative">
@@ -145,10 +145,10 @@ export function ProductShowcase() {
                 </div>
                 <div>
                   <div className="font-bold text-sm text-foreground">TLS Evasion</div>
-                  <div className="text-[11px] text-muted-foreground">JA4 Fingerprint Spoof</div>
+                  <div className="text-[11px] text-muted-foreground">Browser Handshake Profile</div>
                 </div>
                 <div className="text-[10px] font-mono text-blue-500 font-semibold">
-                  {chaosState === 'cloudflare-challenge' ? '⚡ Challenge Solved' : '✓ Verified 99.8%'}
+                  {chaosState === 'cloudflare-challenge' ? '⚡ Challenge Solved' : '✓ Verified Profile'}
                 </div>
               </div>
 
@@ -164,10 +164,10 @@ export function ProductShowcase() {
                 </div>
                 <div>
                   <div className="font-bold text-sm text-foreground">Session Pacing</div>
-                  <div className="text-[11px] text-muted-foreground">Residential IP Swapper</div>
+                  <div className="text-[11px] text-muted-foreground">Residential Gateway Swap</div>
                 </div>
                 <div className="text-[10px] font-mono text-amber-500 font-semibold">
-                  {chaosState === 'rate-limit-429' ? '🔄 IP Swapped (250ms)' : '✓ Rotated'}
+                  {chaosState === 'rate-limit-429' ? '🔄 IP Swapped (250ms)' : '✓ Gateway Active'}
                 </div>
               </div>
 
@@ -183,10 +183,10 @@ export function ProductShowcase() {
                 </div>
                 <div>
                   <div className="font-bold text-sm text-foreground">Self-Healing AST</div>
-                  <div className="text-[11px] text-muted-foreground">Semantic JSON-LD Tag</div>
+                  <div className="text-[11px] text-muted-foreground">Semantic Tag Matcher</div>
                 </div>
                 <div className="text-[10px] font-mono text-purple-500 font-semibold">
-                  {chaosState === 'markup-drift' ? '🧩 Heuristic Active' : '✓ Standard Match'}
+                  {chaosState === 'markup-drift' ? '🧩 Heuristic Fallback' : '✓ Standard Match'}
                 </div>
               </div>
 
@@ -215,7 +215,7 @@ export function ProductShowcase() {
               <div className="flex items-center justify-between text-xs font-mono">
                 <span className="text-muted-foreground font-semibold flex items-center gap-1.5">
                   <Zap className="w-3.5 h-3.5 text-emerald-500" />
-                  RESILIENCE RECOVERY LOG STREAM:
+                  SIMULATED RECOVERY LOG STREAM:
                 </span>
                 {isSimulating && (
                   <span className="text-emerald-500 animate-spin">
@@ -244,17 +244,17 @@ export function ProductShowcase() {
               </div>
             </div>
 
-            {/* Performance Stats Cards */}
+            {/* Performance Stats Cards - Clear Simulated Metrics */}
             <div className="lg:col-span-4 space-y-3">
               <div className="text-xs font-mono text-muted-foreground font-semibold flex items-center gap-1.5">
                 <BarChart3 className="w-3.5 h-3.5 text-blue-500" />
-                SYSTEM LATENCY METRICS:
+                BENCHMARK LATENCY (SIMULATED):
               </div>
 
               <div className="p-4 rounded-xl border border-border bg-background space-y-3">
                 <div>
                   <div className="flex justify-between text-xs font-mono mb-1">
-                    <span className="text-muted-foreground">p50 Latency</span>
+                    <span className="text-muted-foreground">Target p50 Latency</span>
                     <span className="font-bold text-foreground">95 ms</span>
                   </div>
                   <div className="w-full h-1.5 rounded-full bg-muted overflow-hidden">
@@ -264,7 +264,7 @@ export function ProductShowcase() {
 
                 <div>
                   <div className="flex justify-between text-xs font-mono mb-1">
-                    <span className="text-muted-foreground">p95 Latency</span>
+                    <span className="text-muted-foreground">Target p95 Latency</span>
                     <span className="font-bold text-foreground">180 ms</span>
                   </div>
                   <div className="w-full h-1.5 rounded-full bg-muted overflow-hidden">
@@ -274,8 +274,8 @@ export function ProductShowcase() {
 
                 <div>
                   <div className="flex justify-between text-xs font-mono mb-1">
-                    <span className="text-muted-foreground">Evasion Success Rate</span>
-                    <span className="font-bold text-emerald-600 dark:text-emerald-400">99.4%</span>
+                    <span className="text-muted-foreground">Benchmark Success Rate</span>
+                    <span className="font-bold text-emerald-600 dark:text-emerald-400">99.4% (Test)</span>
                   </div>
                   <div className="w-full h-1.5 rounded-full bg-muted overflow-hidden">
                     <div className="h-full bg-emerald-500 rounded-full w-[99.4%]"></div>
@@ -284,7 +284,7 @@ export function ProductShowcase() {
 
                 <div>
                   <div className="flex justify-between text-xs font-mono mb-1">
-                    <span className="text-muted-foreground">Worker Node Memory</span>
+                    <span className="text-muted-foreground">Worker Node Footprint</span>
                     <span className="font-bold text-foreground">&lt; 42 MB / node</span>
                   </div>
                   <div className="w-full h-1.5 rounded-full bg-muted overflow-hidden">
